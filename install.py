@@ -22,6 +22,8 @@ def main():
         ('kitty/madara.conf', config / 'kitty/madara.conf'),
         ('fastfetch/madara.jsonc', config / 'fastfetch/madara.jsonc'),
         ('fastfetch/sharingan.txt', config / 'fastfetch/sharingan.txt'),
+        ('fastfetch/madara-kitty.jsonc', config / 'fastfetch/madara-kitty.jsonc'),
+        ('fastfetch/sharingan.png', config / 'fastfetch/sharingan.png'),
         ('wallpapers/madara.png', data / 'madara-rice/madara.png'),
     ]
 

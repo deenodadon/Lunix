@@ -70,6 +70,35 @@ Super+F to maximize, Super+Shift+F for fullscreen, and Super+Tab for overview.
 
 ## Sharingan terminal logo
 
+### Image logo for Kitty (recommended)
+
+The original ASCII approximation does not match the concept preview. A separate
+transparent PNG recreates its red dot-matrix emblem. For consistent proportions,
+the image configuration uses Kitty graphics at 24 columns by 12 rows (approximately
+square with a typical monospace font). This is a recreation, not an exact extraction
+from the generated preview. Adjust dimensions together if your font has a different
+cell aspect ratio; 20 by 10 makes it smaller.
+
+After rerunning the updated installer, run **inside Kitty**:
+
+```sh
+fastfetch --config "${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/madara-kitty.jsonc" \
+  --logo "${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/sharingan.png"
+```
+
+Use the explicit logo path above to support custom XDG directories. Image display
+depends on Fastfetch Kitty graphics support and the terminal; use it directly in
+Kitty, outside tmux/screen. Live image rendering must be checked on your machine.
+
+Open your Bash startup file for editing with `nano ~/.bashrc`. Do not execute
+`~/.bashrc` as a command. Replace the previous Fastfetch/Neofetch startup block
+with the image command above, inside an interactive-shell guard, and keep only
+one startup command. If the editor reports permission denied when saving, check
+the actual file ownership before changing permissions; no sudo is needed for
+ordinary files owned by your user.
+
+### ASCII fallback
+
 Install Fastfetch with `sudo dnf install fastfetch`. The installer now places
 `fastfetch/madara.jsonc` alongside your existing Fastfetch configuration without
 replacing it. Run this after installation:
