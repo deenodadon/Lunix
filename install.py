@@ -20,6 +20,8 @@ def main():
         ('themes/madara.json', config / 'DankMaterialShell/themes/madara.json'),
         ('niri/style.kdl', config / 'niri/madara-style.kdl'),
         ('kitty/madara.conf', config / 'kitty/madara.conf'),
+        ('fastfetch/madara.jsonc', config / 'fastfetch/madara.jsonc'),
+        ('fastfetch/sharingan.txt', config / 'fastfetch/sharingan.txt'),
         ('wallpapers/madara.png', data / 'madara-rice/madara.png'),
     ]
 

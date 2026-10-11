@@ -68,7 +68,36 @@ Super+Enter for Kitty, Super+D for the DMS launcher, Super+Q to close,
 Super+arrow keys to focus, Super+Page Up/Down for workspaces,
 Super+F to maximize, Super+Shift+F for fullscreen, and Super+Tab for overview.
 
-## Validate and undo
+## Sharingan terminal logo
+
+Install Fastfetch with `sudo dnf install fastfetch`. The installer now places
+`fastfetch/madara.jsonc` alongside your existing Fastfetch configuration without
+replacing it. Run this after installation:
+
+```sh
+fastfetch --config "${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/madara.jsonc"
+```
+
+This displays a red three-tomoe Sharingan-inspired ASCII emblem beside your
+actual system information, with blue labels. It is terminal artwork rather than
+the exact generated artwork in the concept preview. The logo is embedded in the
+configuration so there is no hardcoded username or logo-path dependency;
+`fastfetch/sharingan.txt` is included separately for editing and reuse.
+
+To show it when Bash starts, replace your previous automatic Fastfetch command
+in `~/.bashrc` with the following (keep only one startup block):
+
+```bash
+if [[ $- == *i* ]] && command -v fastfetch >/dev/null; then
+    fastfetch --config "${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/madara.jsonc"
+fi
+```
+
+For an existing install, download the updated bundle and rerun `python3 install.py`.
+You can also download just the standalone `fastfetch/madara.jsonc` from this repo
+and run `fastfetch --config /path/to/madara.jsonc`.
+
+## Validation and rollback
 
 Before switching sessions, validate on your Nobara machine:
 
