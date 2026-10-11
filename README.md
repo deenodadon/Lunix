@@ -15,6 +15,15 @@ generated Madara wallpaper with dark space on the left for windows.
 
 ## Install on your Nobara computer
 
+For custom **blood-red folder icons**, run `python3 install-folders.py` as your
+normal user in your desktop session, then restart Nautilus with `nautilus -q`.
+It installs `Madara-Blood` under your XDG user icon directory and activates it
+through GSettings. Common folders share the same red folder shape; other icons
+inherit your previous icon theme. The script prints the command to restore your
+previous theme. If DMS controls the icon theme, select **Madara-Blood** there too.
+This affects apps that follow the GNOME icon-theme setting; other desktops may
+need their icon theme selected separately.
+
 This bundle assumes Niri and DMS are already installed. If needed, follow the
 [official Dank Linux installation documentation](https://danklinux.com/docs).
 Keep your existing Nobara desktop available while setting up your Niri session.
